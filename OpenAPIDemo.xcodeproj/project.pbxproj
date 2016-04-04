@@ -55,6 +55,8 @@
 		C1E647D61CB23A61008BF34C /* AdAuthWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F17EB5717A5F7DF00C9E16B /* AdAuthWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C1E647D71CB23A61008BF34C /* AdRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F17EB5917A5F7DF00C9E16B /* AdRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C1E647D81CB23A61008BF34C /* AllDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F17EB5B17A5F7DF00C9E16B /* AllDefine.m */; };
+		C1E647DF1CB24EB2008BF34C /* btnCross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E647DE1CB24EB2008BF34C /* btnCross@2x.png */; };
+		C1E647E01CB24EB2008BF34C /* btnCross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E647DE1CB24EB2008BF34C /* btnCross@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,11 +124,10 @@
 		0FED3107179FA2F10041A11D /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0FED3108179FA2F10041A11D /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		0FED3109179FA2F10041A11D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		C1E6479F1CB237A3008BF34C /* iHealthLabsLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHealthLabsLib.h; sourceTree = "<group>"; };
-		C1E647A11CB237A3008BF34C /* iHealthLabsLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iHealthLabsLib.m; sourceTree = "<group>"; };
 		C1E647C01CB23A3F008BF34C /* iHealthLabsLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iHealthLabsLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E647C21CB23A3F008BF34C /* iHealthLabsLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iHealthLabsLib.h; sourceTree = "<group>"; };
 		C1E647C41CB23A3F008BF34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1E647DE1CB24EB2008BF34C /* btnCross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btnCross@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,11 +155,11 @@
 		0F4FA937157393B5002A9F51 = {
 			isa = PBXGroup;
 			children = (
+				C1E647DE1CB24EB2008BF34C /* btnCross@2x.png */,
 				0F9FA47715B3A92F00A5313E /* SFHFKeychainUtils */,
 				0F89C6721574E76000515D9F /* SBJSON */,
 				0FD9F7C91575EDBD0099C468 /* OpenAPI */,
 				0F4FA94C157393B5002A9F51 /* OpenAPIDemo */,
-				C1E6479E1CB237A3008BF34C /* iHealthLabsLib */,
 				C1E647C11CB23A3F008BF34C /* iHealthLabsLib */,
 				0F4FA945157393B5002A9F51 /* Frameworks */,
 				0F4FA943157393B5002A9F51 /* Products */,
@@ -270,15 +271,6 @@
 			path = OpenAPIDemo;
 			sourceTree = "<group>";
 		};
-		C1E6479E1CB237A3008BF34C /* iHealthLabsLib */ = {
-			isa = PBXGroup;
-			children = (
-				C1E6479F1CB237A3008BF34C /* iHealthLabsLib.h */,
-				C1E647A11CB237A3008BF34C /* iHealthLabsLib.m */,
-			);
-			path = iHealthLabsLib;
-			sourceTree = "<group>";
-		};
 		C1E647C11CB23A3F008BF34C /* iHealthLabsLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +375,7 @@
 				0FE0A3A5157DA03B00A88338 /* up.png in Resources */,
 				0FE0A3A8157DA04400A88338 /* down.png in Resources */,
 				0FDCC93E157EEFD200F799F8 /* DetailDataCell.xib in Resources */,
+				C1E647DF1CB24EB2008BF34C /* btnCross@2x.png in Resources */,
 				0FED310E179FA2F10041A11D /* ViewController.xib in Resources */,
 				0F17EB6317A64C7900C9E16B /* myCell.xib in Resources */,
 				0F092A7D17AFA22000E77CCE /* DataRequestViewController.xib in Resources */,
@@ -394,6 +387,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E647E01CB24EB2008BF34C /* btnCross@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +559,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techlogix.iHealthLabsLib;
@@ -613,6 +608,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techlogix.iHealthLabsLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -651,6 +647,7 @@
 				C1E647C71CB23A3F008BF34C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

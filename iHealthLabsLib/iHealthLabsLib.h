@@ -17,3 +17,9 @@ FOUNDATION_EXPORT const unsigned char iHealthLabsLibVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <iHealthLabsLib/PublicHeader.h>
 
 
+#import "AdEngines.h"
+#import "AdAuth.h"
+//#import "SFHFKeychainUtils.h"
+#import "AllDefine.h"
+#import "AdAuthWebView.h"
+#import "AdRequest.h"

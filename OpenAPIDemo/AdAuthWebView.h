@@ -29,6 +29,7 @@
 }
 
 @property (nonatomic, assign) id<AdAuthoWebViewDelegate> delegate;
+@property (nonatomic, retain) UIButton * cancelButton;
 
 - (void)loadRequestWithURL:(NSURL *)url;
 

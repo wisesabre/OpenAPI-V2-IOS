@@ -80,6 +80,11 @@
         indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         [indicatorView setCenter:CGPointMake(160, 240)];
         [self addSubview:indicatorView];
+        
+        self.cancelButton = [[UIButton alloc] initWithFrame:CGRectZero];
+        [self.cancelButton setImage:[UIImage imageNamed:@"btnCross"] forState:UIControlStateNormal];
+        [self.cancelButton addTarget:self action:@selector(onCloseButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.cancelButton];
     }
     return self;
 }
@@ -111,25 +116,29 @@
 - (void)sizeToFitOrientation:(UIInterfaceOrientation)orientation
 {
     [self setTransform:CGAffineTransformIdentity];
-    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
     if (UIInterfaceOrientationIsLandscape(orientation))
     {
-        [self setFrame:CGRectMake(0, 0, 480, 320)];
-        [panelView setFrame:CGRectMake(10, 30, 460, 280)];
-        [containerView setFrame:CGRectMake(10, 10, 440, 260)];
-        [webView setFrame:CGRectMake(0, 0, 440, 260)];
-        [indicatorView setCenter:CGPointMake(240, 160)];
+        [self setFrame:CGRectMake(0, 0, screenHeight, screenWidth)];
+        [panelView setFrame:CGRectMake(10, 100, screenHeight-20, screenWidth-20)];
+        [containerView setFrame:CGRectMake(10, 10, screenHeight-40, screenWidth-40)];
+        [webView setFrame:CGRectMake(0, 0, screenHeight-40, screenWidth-40)];
+        [indicatorView setCenter:CGPointMake(screenHeight/2, screenWidth/2)];
+        [self.cancelButton setFrame:CGRectMake(screenWidth-20-15, 25, 30, 30)];
     }
     else
     {
-        [self setFrame:CGRectMake(0, 0, 320, 480)];
-        [panelView setFrame:CGRectMake(10, 30, 300, 440)];
-        [containerView setFrame:CGRectMake(10, 10, 280, 420)];
-        [webView setFrame:CGRectMake(0, 0, 280, 420)];
-        [indicatorView setCenter:CGPointMake(160, 240)];
+        [self setFrame:CGRectMake(0, 0, screenWidth, screenHeight)];
+        [panelView setFrame:CGRectMake(10, 30, screenWidth-20, screenHeight-50)];
+        [containerView setFrame:CGRectMake(10, 10, screenWidth-40, screenHeight-70)];
+        [webView setFrame:CGRectMake(0, 0, screenWidth-40, screenHeight-70)];
+        [indicatorView setCenter:CGPointMake(screenWidth/2, screenHeight/2)];
+        [self.cancelButton setFrame:CGRectMake(screenWidth-20-15, 25, 30.0, 30)];
     }
     
-    [self setCenter:CGPointMake(160, 240)];
+    [self setCenter:CGPointMake(screenWidth/2, screenHeight/2)];
     
     [self setTransform:[self transformForOrientation:orientation]];
     
